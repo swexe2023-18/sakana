@@ -2,8 +2,16 @@
 
 one:
   uid: MyString
+<<<<<<< HEAD
   password_digest: MyString
 
 two:
   uid: MyString
   password_digest: MyString
+=======
+  pass: MyString
+
+two:
+  uid: MyString
+  pass: MyString
+>>>>>>> 4c2f686efc04e6695de91d33a307d7c78d38ec5c
