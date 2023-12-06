@@ -10,12 +10,6 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema[7.0].define(version: 2023_11_29_065846) do
-  create_table "users", force: :cascade do |t|
-    t.string "uid"
-    t.string "password_digest"
-=======
 ActiveRecord::Schema[7.0].define(version: 2023_11_29_072938) do
   create_table "contents", force: :cascade do |t|
     t.string "fish_name"
@@ -31,7 +25,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_11_29_072938) do
   create_table "users", force: :cascade do |t|
     t.string "uid"
     t.string "pass"
->>>>>>> 4c2f686efc04e6695de91d33a307d7c78d38ec5c
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
