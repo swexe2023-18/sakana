@@ -1,3 +1,8 @@
+
+<center>
+<body>
+<h2><font color="#FF9900">ユーザー新規登録</font></h2>
+
 <% if @user.errors.present? %>
 <h1>エラー</h1>
 <ul>
@@ -7,12 +12,22 @@
 </ul>
 <% end %>
 
+<hr style="border:none;border-top:dashed 2px #FF9900;height:2px;width:300px;">
+
 <%= form_for @user, url:{action: :create} do |f| %>
-    <%= f.label :uid, "ユーザーID" %>
-    <%= f.text_field :uid %>
-    <%= f.label :password, "パスワード" %>
+    <p style="padding-top: 10px; color: #FF9900;">
+        <%= f.label :uid, "ユーザーID👤" %>
+        <%= f.text_field :uid %>
+    </p>
+    <p style="padding-top: 10px; color: red;">
+    <%= f.label :password, "パスワード🔓" %>
     <%= f.password_field :password %>
-    <%= f.label :password_confirmation, 'パスワード確認' %>
+    </p>
+    <p style="padding-top: 10px; color: red;">
+    <%= f.label :password_confirmation, 'パスワード確認🔐' %>
     <%= f.password_field :password_confirmation %>
+    </p>
     <%= f.submit "登録" %>
 <% end %>
+</body>
+</center>

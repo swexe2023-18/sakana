@@ -1,7 +1,16 @@
+<center><h2><font color="#FF9900">ユーザーログイン</font></h2>
+
 <%= form_tag '/top/login', method: :post do %>
-<%= label_tag :uid, 'ユーザーID' %>
-<%= text_field_tag :uid %>
-<%= label_tag :pass, 'パスワード' %>
-<%= password_field_tag :pass %>
-<%= submit_tag '登録' %>
+    <p style="padding-top: 10px; color: #FF9900;">
+        <%= label_tag :uid, 'ユーザーID👤' %>
+        <%= text_field_tag :uid %>
+    </p>
+    <p style="padding-top: 10px; color: red;">
+        <%= label_tag :pass, 'パスワード🔓' %>
+        <%= password_field_tag :pass %>
+    </p>
+    <p style="padding-top: 10px; color: red;">
+    <%= submit_tag 'ログイン' %>
+    </p>
 <% end %>
+</center>
