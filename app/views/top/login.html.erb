@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <center><h2><font color="#FF9900">ユーザーログイン</font></h2>
 
 <%= form_tag '/top/login', method: :post do %>
@@ -12,5 +13,13 @@
     <p style="padding-top: 10px; color: red;">
     <%= submit_tag 'ログイン' %>
     </p>
+=======
+<%= form_tag '/top/login', method: :post, data:{turbo: false} do %>
+<%= label_tag :uid, 'ユーザーID' %>
+<%= text_field_tag :uid %>
+<%= label_tag :pass, 'パスワード' %>
+<%= password_field_tag :pass %>
+<%= submit_tag 'ログイン' %>
+>>>>>>> af9155aff06509564f3f864ef8119502ff1a9ee6
 <% end %>
 </center>

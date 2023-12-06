@@ -1,1 +1,19 @@
+<% @contents.each do |e| %>
+<p>
+    <%= e.message %>
+    <%= e.fish_name %>
+    <%= e.size %>
+    <%= e.place_name %>
+    <%= image_tag "/get_image/#{e.id}" %>
+    <%= video_tag "/get_video/#{e.id}" %>
+</p>
+<% end %>
+
+
 <%= link_to "新規登録", new_user_path %>
+<%= link_to "ログイン", top_main_path %>
+<% if current_user %>
+    <%= link_to 'ログアウト', top_logout_path %>
+<% end %>
+
+<%= link_to "投稿する", new_content_path %>
