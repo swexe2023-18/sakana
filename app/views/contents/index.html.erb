@@ -1,3 +1,4 @@
+<htmml>
 <% @contents.each do |e| %>
 <p>
     <%= e.message %>
@@ -8,12 +9,71 @@
     <%= video_tag "/get_video/#{e.id}" %>
 </p>
 <% end %>
+<%= image_tag "fishing_gyotaku.png", class: "img"%>
 
+<%= link_to "ぎょたったー", contents_path, class: "name"%>
+    
+<%= link_to "新規登録", new_user_path, class: "btn btn--uid1"%>
+<%= link_to "ログイン", top_main_path, class: "btn uid2"%>
 
-<%= link_to "新規登録", new_user_path %>
-<%= link_to "ログイン", top_main_path %>
 <% if current_user %>
-    <%= link_to 'ログアウト', top_logout_path %>
+    <%= link_to 'ログアウト', top_logout_path, class: "btn uid2"%>
 <% end %>
 
-<%= link_to "投稿する", new_content_path %>
+<%= link_to "投稿する", new_content_path, class:"btn uid3"%>
+</div>
+</html>
+
+
+<style>
+    html{
+        background: linear-gradient(90deg, rgb(11, 110, 255), rgb(0, 196, 255));
+    }
+    .btn--uid1{
+        color: #FFFFFF;
+        position: fixed;
+        top: 20px;right: 200px;
+        font-size: 20px;
+        background: #FF9900;
+        border-radius: 100vh;
+        padding: 12px 20px;
+    }
+    .uid2{
+        color: #FFFFFF;
+        position: fixed;
+        top: 80px;right: 200px;
+        font-size: 20px;
+        background: #FF9900;
+        border-radius: 100vh;
+        padding: 12px 20px;
+    }
+    
+    .uid3{
+        color: #FFFFFF;
+        position: fixed;
+        top: 20px;right: 70px;
+        font-size: 20px;
+        background: #FF9900;
+        border-radius: 100vh;
+        padding: 12px 20px;
+    }
+    
+    .img{
+
+        width: 150px;
+        height: 150px;
+        object-fit:cover;
+        margin: 0 0 0 20px;
+    }
+    
+    .name{
+        position: absolute;
+        left: 28px;
+        top: 110px;
+        font-size:25px;
+        font-weight: 900;
+        color: #FF9900;
+        padding:0;
+        margin:0;
+    }
+</style>

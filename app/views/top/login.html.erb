@@ -1,25 +1,90 @@
-<<<<<<< HEAD
-<center><h2><font color="#FF9900">ユーザーログイン</font></h2>
+<html>
 
-<%= form_tag '/top/login', method: :post do %>
-    <p style="padding-top: 10px; color: #FF9900;">
+<%= image_tag "fishing_gyotaku.png", class: "img"%>
+
+<%= link_to "ぎょたったー", contents_path, class: "name"%>
+<%= link_to "新規登録", new_user_path, class: "btn btn--uid1"%>
+
+<%= link_to "投稿する", new_content_path, class:"btn uid3"%>
+
+<center>
+<h2>ユーザーログイン</h2>
+<hr>
+<%= form_tag '/top/login', method: :post, data:{turbo: false} do %>
+    <p class="uid">
         <%= label_tag :uid, 'ユーザーID👤' %>
         <%= text_field_tag :uid %>
     </p>
-    <p style="padding-top: 10px; color: red;">
+    <p class="pass">
         <%= label_tag :pass, 'パスワード🔓' %>
         <%= password_field_tag :pass %>
     </p>
-    <p style="padding-top: 10px; color: red;">
+    <p class="pass">
     <%= submit_tag 'ログイン' %>
     </p>
-=======
-<%= form_tag '/top/login', method: :post, data:{turbo: false} do %>
-<%= label_tag :uid, 'ユーザーID' %>
-<%= text_field_tag :uid %>
-<%= label_tag :pass, 'パスワード' %>
-<%= password_field_tag :pass %>
-<%= submit_tag 'ログイン' %>
->>>>>>> af9155aff06509564f3f864ef8119502ff1a9ee6
 <% end %>
 </center>
+</html>
+
+
+<style>
+    html{
+        background: linear-gradient(90deg, rgb(11, 110, 255), rgb(0, 196, 255));
+        color:#cccccc;
+    }
+    h2{
+        color:  #FF9900;
+    }
+    
+    hr{
+        border:none;border-top:dashed 2px #FF9900;height:2px;width:300px;
+    }
+    
+    .uid{
+        padding-top: 10px; 
+        color: #FF9900;
+    }
+    
+    .pass{
+        padding-top: 10px; color: red;
+    }
+    
+    .btn--uid1{
+        color: #FFFFFF;
+        position: fixed;
+        top: 20px;right: 200px;
+        font-size: 20px;
+        background: #FF9900;
+        border-radius: 100vh;
+        padding: 12px 20px;
+    }
+    
+    .uid3{
+        color: #FFFFFF;
+        position: fixed;
+        top: 20px;right: 70px;
+        font-size: 20px;
+        background: #FF9900;
+        border-radius: 100vh;
+        padding: 12px 20px;
+    }
+    
+    .img{
+
+        width: 150px;
+        height: 150px;
+        object-fit:cover;
+        margin: 0 0 0 20px;
+    }
+    
+    .name{
+        position: absolute;
+        left: 28px;
+        top: 110px;
+        font-size:25px;
+        font-weight: 900;
+        color: #FF9900;
+        padding:0;
+        margin:0;
+    }
+</style>
