@@ -4,8 +4,10 @@
     <%= e.fish_name %>
     <%= e.size %>
     <%= e.place_name %>
-    <%= image_tag "/get_image/#{e.id}" %>
-    <%= video_tag "/get_video/#{e.id}" %>
+    <%= image_tag "/get_image/#{e.id}"%>
+    <%= video_tag "/get_video/#{e.id}",controls: true, :size => "960×540" %>
+    <%= link_to "削除", "/contents/#{e.id}" , data:{turbo_method: :delete} %>
+    <%= link_to "編集", edit_content_path(e) %>
 </p>
 <% end %>
 
