@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <html>
 
 <%= image_tag "fishing_gyotaku.png", class: "img"%>
@@ -12,6 +13,12 @@
 <hr>
 <%= form_tag '/top/login', method: :post, data:{turbo: false} do %>
     <p class="uid">
+=======
+<center><h2><font color="#FF9900">ユーザーログイン</font></h2>
+
+<%= form_tag '/top/login', method: :post, data:{turbo: false} do %>
+    <p style="padding-top: 10px; color: #FF9900;">
+>>>>>>> 84f66722ce8346ffd64f6db722ff75e7806b427f
         <%= label_tag :uid, 'ユーザーID👤' %>
         <%= text_field_tag :uid %>
     </p>

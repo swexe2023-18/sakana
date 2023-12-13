@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
     helper_method :current_user
-    
+    helper_method :current_content
     
     private
     def current_user
@@ -9,5 +9,20 @@ class ApplicationController < ActionController::Base
         end
     end
     
+    private
+    def current_content
+        file = params[:content][:image]
+        video = params[:content][:mp3]
+        if file != nil
+          file = file.read
+        else
+          file = nil
+        end
     
+        if video != nil
+          video = video.read
+        else
+          video = nil
+        end
+    end
 end
