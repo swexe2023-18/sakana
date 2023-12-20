@@ -1,11 +1,8 @@
 Rails.application.routes.draw do
-<<<<<<< HEAD
-
-=======
->>>>>>> 84f66722ce8346ffd64f6db722ff75e7806b427f
     root 'contents#index'
     resources :users, only: [:new, :create, :destroy]
     resources :contents, only: [:index, :new, :create, :edit, :destroy, :edit, :update]
+    resources :prefectures, only: [:index]
     get 'get_image/:id', to: 'contents#get_image'
     get 'get_video/:id', to: 'contents#get_video'
     get 'top/main'

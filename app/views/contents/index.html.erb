@@ -4,6 +4,7 @@
     <%= e.message %>
     <%= e.fish_name %>
     <%= e.size %>
+    <%= e.prefecture_name %>
     <%= e.place_name %>
     <%= image_tag "/get_image/#{e.id}"%>
     <%= video_tag "/get_video/#{e.id}",controls: true, :size => "960×540" %>
@@ -23,6 +24,8 @@
 <% end %>
 
 <%= link_to "投稿する", new_content_path, class:"btn uid3"%>
+
+<%= link_to "北海道", prefectures_path %>
 </div>
 </html>
 
