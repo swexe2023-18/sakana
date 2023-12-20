@@ -25,6 +25,7 @@ class ContentsController < ApplicationController
     content = Content.new(message: params[:content][:message] , 
                           fish_name: params[:content][:fish_name],
                           size: params[:content][:size],
+                          prefecture_name: params[:content][:prefecture_name],
                           place_name: params[:content][:place_name],
                           image: file,
                           mp3: video)

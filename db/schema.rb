@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_11_29_072938) do
+ActiveRecord::Schema[7.0].define(version: 2023_12_20_084123) do
   create_table "contents", force: :cascade do |t|
     t.string "fish_name"
     t.string "place_name"
@@ -18,6 +18,12 @@ ActiveRecord::Schema[7.0].define(version: 2023_11_29_072938) do
     t.integer "size"
     t.binary "image"
     t.binary "mp3"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "prefecture_name"
+  end
+
+  create_table "prefectures", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
