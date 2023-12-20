@@ -1,16 +1,5 @@
 <htmml>
-<% @contents.each do |e| %>
-<p>
-    <%= e.message %>
-    <%= e.fish_name %>
-    <%= e.size %>
-    <%= e.place_name %>
-    <%= image_tag "/get_image/#{e.id}"%>
-    <%= video_tag "/get_video/#{e.id}",controls: true, :size => "960×540" %>
-    <%= link_to "削除", "/contents/#{e.id}" , data:{turbo_method: :delete} %>
-    <%= link_to "編集", edit_content_path(e) %>
-</p>
-<% end %>
+
 <%= image_tag "fishing_gyotaku.png", class: "img"%>
 
 <%= link_to "ぎょたったー", contents_path, class: "name"%>
@@ -24,12 +13,41 @@
 
 <%= link_to "投稿する", new_content_path, class:"btn uid3"%>
 </div>
+<center>
+<% @contents.each do |e| %>
+<p>
+    <div class="contents">
+    <%= image_tag "/get_image/#{e.id}", :size => "337.5x600"%>
+    <%= video_tag "/get_video/#{e.id}",controls: true, height: "50%", width: "30%"%>
+    <br>
+    <nobr class="fname">
+   ・ 魚の名前🐟：
+    </nobr>
+    <%= e.fish_name %>
+    <nobr class="size">
+    ・サイズ📏：
+    </nobr>
+    <%= e.size %>
+    cm
+    <nobr class="place">
+    ・場所🎣：
+    </nobr>
+    <%= e.place_name %>
+    <br>
+    ・コメント💭：
+    <%= e.message %>
+    </div>
+    <%= link_to "削除", "/contents/#{e.id}" , data:{turbo_method: :delete} %>
+    <%= link_to "編集", edit_content_path(e) %>
+</p>
+<% end %>
+</center>
 </html>
 
 
 <style>
     html{
-        background: linear-gradient(90deg, rgb(11, 110, 255), rgb(0, 196, 255));
+        background: linear-gradient(90deg, rgb(11, 110, 255), rgb(0, 255, 255));
     }
     .btn--uid1{
         color: #FFFFFF;
@@ -61,7 +79,7 @@
     }
     
     .img{
-
+        position: fixed;
         width: 150px;
         height: 150px;
         object-fit:cover;
@@ -70,6 +88,7 @@
     
     .name{
         position: absolute;
+        position: fixed;
         left: 28px;
         top: 110px;
         font-size:25px;
@@ -77,5 +96,25 @@
         color: #FF9900;
         padding:0;
         margin:0;
+    }
+    
+    .contents{
+        font-size: 20px;
+        background: #FFFFCC;
+        background-clip: content-box;
+        width: 70%;
+        border-radius: 100vh;
+    }
+    .fname{
+        color: #FF9900;
+        padding-left: 10px;
+    }
+    .size{
+        color: #00CC33;
+        padding-left: 10px;
+    }
+    .place{
+        color: #880000;
+        padding-left: 10px;
     }
 </style>

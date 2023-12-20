@@ -1,8 +1,5 @@
 Rails.application.routes.draw do
-<<<<<<< HEAD
 
-=======
->>>>>>> 84f66722ce8346ffd64f6db722ff75e7806b427f
     root 'contents#index'
     resources :users, only: [:new, :create, :destroy]
     resources :contents, only: [:index, :new, :create, :edit, :destroy, :edit, :update]

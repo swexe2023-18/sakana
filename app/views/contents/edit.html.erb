@@ -1,15 +1,93 @@
+<html>
+<%= image_tag "fishing_gyotaku.png", class: "img"%>
+<%= link_to "ぎょたったー", contents_path, class: "name"%>
+<%= link_to "新規登録", new_user_path, class: "btn btn--uid1"%>
+<%= link_to "ログイン", top_main_path, class: "btn uid2"%>
+
+<% if current_user %>
+    <%= link_to 'ログアウト', top_logout_path, class: "btn uid2"%>
+<% end %>
+
+<center>
 <%= form_for @content , url: {action: :update} do |f| %>
-    <%= f.label :message, 'メッセージ' %>
-    <%= f.text_field :message %>
-    <%= f.label :fish_name, '魚の名前' %>
-    <%= f.text_field :fish_name %>
-    <%= f.label :size, '魚のサイズ' %>
-    <%= f.number_field :size %>
-    <%= f.label :place_name, '釣った場所の名前' %>
-    <%= f.text_field :place_name %>
-    <%= f.label :image, "画像" %>
+    <%= f.label :image, "画像📷", {class: "contents1"}%>
     <%= f.file_field :image %>
-    <%= f.label :mp3, "動画" %>
+    <%= f.label :mp3, "動画🎥", {class: "contents1"} %>
     <%= f.file_field :mp3 %>
+    <hr>
+    <%= f.label :fish_name, '魚の名前🐟', {class: "contents2"} %>
+    <%= f.text_field :fish_name %>
+    <%= f.label :size, '魚のサイズ📏(cm)', {class: "contents2"}%>
+    <%= f.number_field :size %>
+    <br>
+    <%= f.label :place_name, '釣った場所の名前🎣', {class: "contents2"} %>
+    <%= f.text_field :place_name %>
+    <br>
+    <%= f.label :message, 'コメント💭', {class: "contents"} %>
+    <%= f.text_field :message %>
+    <br>
     <%= f.submit "更新" %>
 <% end %>
+</center>
+</html>
+
+<style>
+    html{
+        background: linear-gradient(90deg, rgb(11, 110, 255), rgb(0, 255, 255));
+    }
+    .img{
+
+        width: 150px;
+        height: 150px;
+        object-fit:cover;
+        margin: 0 0 0 20px;
+    }
+    .name{
+        position: absolute;
+        left: 28px;
+        top: 110px;
+        font-size:25px;
+        font-weight: 900;
+        color: #FF9900;
+        padding:0;
+        margin:0;
+    }
+    hr{
+        border:none;border-top:dashed 2px #FF9900;height:2px;width:800px;
+        paddong: 25px;
+    }
+    .btn--uid1{
+        color: #FFFFFF;
+        position: fixed;
+        top: 20px;right: 200px;
+        font-size: 20px;
+        background: #FF9900;
+        border-radius: 100vh;
+        padding: 12px 20px;
+    }
+    .uid2{
+        color: #FFFFFF;
+        position: fixed;
+        top: 80px;right: 200px;
+        font-size: 20px;
+        background: #FF9900;
+        border-radius: 100vh;
+        padding: 12px 20px;
+    }
+    .contents1{
+        color: #FF3300;
+        font-size:23px;
+        font-weight: 900;
+        padding: 10px;
+    }
+    .contents2{
+        color: #FF9900;
+        font-size:20px;
+        font-weight: 900;
+        padding-top: 100px;
+    }
+    .contents{
+        font-size: 20px;
+        font-weight: 900;
+    }
+</style>
