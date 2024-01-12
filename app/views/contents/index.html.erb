@@ -1,21 +1,5 @@
 <htmml>
-<<<<<<< HEAD
 
-=======
-<% @contents.each do |e| %>
-<p>
-    <%= e.message %>
-    <%= e.fish_name %>
-    <%= e.size %>
-    <%= e.prefecture_name %>
-    <%= e.place_name %>
-    <%= image_tag "/get_image/#{e.id}"%>
-    <%= video_tag "/get_video/#{e.id}",controls: true, :size => "960×540" %>
-    <%= link_to "削除", "/contents/#{e.id}" , data:{turbo_method: :delete} %>
-    <%= link_to "編集", edit_content_path(e) %>
-</p>
-<% end %>
->>>>>>> f9bf6464eb9b769b71ba95e09b8e0493b229747a
 <%= image_tag "fishing_gyotaku.png", class: "img"%>
 
 <%= link_to "ぎょたったー", contents_path, class: "name"%>
@@ -27,10 +11,10 @@
     <%= link_to 'ログアウト', top_logout_path, class: "btn uid2"%>
 <% end %>
 
-<%= link_to "投稿する", new_content_path, class:"btn uid3"%>
+<%= link_to "投稿する", new_content_path, class: "btn uid3"%>
 
-<%= link_to "北海道", prefectures_path %>
-</div>
+<%= link_to "北海道", prefectures_path, class: "btn pre1"%>
+
 <center>
 <% @contents.each do |e| %>
 <p>
@@ -104,6 +88,9 @@
         margin: 0 0 0 20px;
     }
     
+    .img2{
+        
+    }
     .name{
         position: absolute;
         position: fixed;
@@ -118,7 +105,7 @@
     
     .contents{
         font-size: 20px;
-        background: #FFFFCC;
+        background-color: #FFFF99;
         background-clip: content-box;
         width: 70%;
         border-radius: 100vh;
@@ -134,5 +121,15 @@
     .place{
         color: #880000;
         padding-left: 10px;
+    }
+    
+    .pre1{
+        color: #FFFFFF;
+        position: fixed;
+        top: 160px;left: 25px;
+        font-size: 15px;
+        background: #FF9900;
+        border-radius: 100vh;
+        padding: 12px 20px;
     }
 </style>

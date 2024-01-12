@@ -10,21 +10,7 @@
 
 <center>
 <%= form_for @content , url: {action: :create} do |f| %>
-<<<<<<< HEAD
     <%= f.label :image, "画像📷", {class: "contents1"}%>
-=======
-    <%= f.label :message, 'メッセージ' %>
-    <%= f.text_field :message %>
-    <%= f.label :fish_name, '魚の名前' %>
-    <%= f.text_field :fish_name %>
-    <%= f.label :size, '魚のサイズ' %>
-    <%= f.number_field :size %>
-    <%= f.label :prefecture_name, '釣った県の名前' %>
-    <%= f.text_field :prefecture_name %>
-    <%= f.label :place_name, '釣った場所の名前' %>
-    <%= f.text_field :place_name %>
-    <%= f.label :image, "画像" %>
->>>>>>> f9bf6464eb9b769b71ba95e09b8e0493b229747a
     <%= f.file_field :image %>
     <%= f.label :mp3, "動画🎥", {class: "contents1"} %>
     <%= f.file_field :mp3 %>
@@ -33,6 +19,9 @@
     <%= f.text_field :fish_name %>
     <%= f.label :size, '魚のサイズ📏(cm)', {class: "contents2"}%>
     <%= f.number_field :size %>
+    <br>
+    <%= f.label :prefecture_name, '釣った県の名前' %>
+    <%= f.text_field :prefecture_name %>
     <br>
     <%= f.label :place_name, '釣った場所の名前🎣', {class: "contents2"} %>
     <%= f.text_field :place_name %>
@@ -51,7 +40,7 @@
         background: linear-gradient(90deg, rgb(11, 110, 255), rgb(0, 255, 255));
     }
     .img{
-
+        position: fixed;
         width: 150px;
         height: 150px;
         object-fit:cover;
