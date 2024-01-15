@@ -1,21 +1,4 @@
 <htmml>
-<<<<<<< HEAD
-
-=======
-<% @contents.each do |e| %>
-<p>
-    <%= e.message %>
-    <%= e.fish_name %>
-    <%= e.size %>
-    <%= e.prefecture_name %>
-    <%= e.place_name %>
-    <%= image_tag "/get_image/#{e.id}"%>
-    <%= video_tag "/get_video/#{e.id}",controls: true, :size => "960×540" %>
-    <%= link_to "削除", "/contents/#{e.id}" , data:{turbo_method: :delete} %>
-    <%= link_to "編集", edit_content_path(e) %>
-</p>
-<% end %>
->>>>>>> f9bf6464eb9b769b71ba95e09b8e0493b229747a
 <%= image_tag "fishing_gyotaku.png", class: "img"%>
 
 <%= link_to "ぎょたったー", contents_path, class: "name"%>
@@ -29,7 +12,8 @@
 
 <%= link_to "投稿する", new_content_path, class:"btn uid3"%>
 
-<%= link_to "北海道", prefectures_path %>
+<%= link_to "北海道", prefectures_path %><br>
+<%= link_to "青森県", aomoris_path %>
 </div>
 <center>
 <% @contents.each do |e| %>
