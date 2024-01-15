@@ -1,0 +1,2 @@
+module IbarakisHelper
+end

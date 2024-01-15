@@ -1,0 +1,2 @@
+module IsikawasHelper
+end

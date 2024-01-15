@@ -1,0 +1,2 @@
+module TotigisHelper
+end

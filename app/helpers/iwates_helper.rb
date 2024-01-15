@@ -1,0 +1,2 @@
+module IwatesHelper
+end

@@ -1,0 +1,2 @@
+module AitisHelper
+end

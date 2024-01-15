@@ -1,0 +1,2 @@
+module ToyamasHelper
+end
