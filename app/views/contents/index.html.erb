@@ -13,7 +13,7 @@
 
 <%= link_to "投稿する", new_content_path, class: "btn uid3"%>
 
-<%= link_to "北海道", prefectures_path, class: "btn pre1"%>
+<%= link_to "北海道", prefectures_path, class: "btn pre"%>
 
 <center>
 <% @contents.each do |e| %>
@@ -88,9 +88,6 @@
         margin: 0 0 0 20px;
     }
     
-    .img2{
-        
-    }
     .name{
         position: absolute;
         position: fixed;
@@ -123,7 +120,7 @@
         padding-left: 10px;
     }
     
-    .pre1{
+    .pre{
         color: #FFFFFF;
         position: fixed;
         top: 160px;left: 25px;
