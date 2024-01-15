@@ -1,0 +1,2 @@
+module AkitasHelper
+end

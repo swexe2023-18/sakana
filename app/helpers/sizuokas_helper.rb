@@ -1,0 +1,2 @@
+module SizuokasHelper
+end

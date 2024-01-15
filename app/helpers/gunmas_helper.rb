@@ -1,0 +1,2 @@
+module GunmasHelper
+end

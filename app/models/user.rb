@@ -11,7 +11,5 @@ class User < ApplicationRecord
         end
         @password = val
     end
-    
-
 
 end

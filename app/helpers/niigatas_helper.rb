@@ -1,0 +1,2 @@
+module NiigatasHelper
+end
