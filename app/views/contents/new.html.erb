@@ -15,18 +15,25 @@
     <%= f.label :mp3, "動画🎥", {class: "contents1"} %>
     <%= f.file_field :mp3 %>
     <hr>
-    <%= f.label :fish_name, '魚の名前🐟', {class: "contents2"} %>
+    <%= f.label :fish_name, '魚の名前🐟', {class: "fname"} %>
     <%= f.text_field :fish_name %>
-    <%= f.label :size, '魚のサイズ📏(cm)', {class: "contents2"}%>
+    <%= f.label :size, '魚のサイズ📏(cm)', {class: "size"}%>
     <%= f.number_field :size %>
     <br>
+<<<<<<< HEAD
     <%= f.label :prefecture_name, '釣った県の名前' %>
     <%= f.text_field :prefecture_name %>
     <br>
     <%= f.label :place_name, '釣った場所の名前🎣', {class: "contents2"} %>
+=======
+    <%= f.label :prefecture_name, '釣った県の名前🗾', {class: "place"} %>
+    <%= f.text_field :prefecture_name %>
+    <br>
+    <%= f.label :place_name, '釣った場所の名前🎣', {class: "place"} %>
+>>>>>>> 065796b12c3d1c088b32749e9dd946889c87db3e
     <%= f.text_field :place_name %>
     <br>
-    <%= f.label :message, 'コメント💭', {class: "contents"} %>
+    <%= f.label :message, 'コメント💭'%>
     <%= f.text_field :message %>
     <br>
     <%= f.submit "投稿" %>
@@ -34,13 +41,12 @@
 </center>
 </html>
 
-
 <style>
     html{
         background: linear-gradient(90deg, rgb(11, 110, 255), rgb(0, 255, 255));
     }
     .img{
-
+        position: fixed;
         width: 150px;
         height: 150px;
         object-fit:cover;
@@ -79,19 +85,28 @@
         padding: 12px 20px;
     }
     .contents1{
+        padding-top: 100px;
         color: #FF3300;
         font-size:23px;
         font-weight: 900;
         padding: 10px;
     }
-    .contents2{
+    .fname{
+        padding-top: 10px;
         color: #FF9900;
-        font-size:20px;
-        font-weight: 900;
-        padding-top: 100px;
+        padding-left: 10px;
+        font-size:23px;
     }
-    .contents{
-        font-size: 20px;
-        font-weight: 900;
+    .size{
+        padding-top: 10px;
+        color: #FF9900;
+        padding-left: 10px;
+        font-size:23px;
+    }
+    .place{
+        padding-top: 10px;
+        color: #880000;
+        padding-left: 10px;
+        font-size:23px;
     }
 </style>

@@ -1,4 +1,8 @@
 <htmml>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 065796b12c3d1c088b32749e9dd946889c87db3e
 <%= image_tag "fishing_gyotaku.png", class: "img"%>
 
 <%= link_to "ぎょたったー", contents_path, class: "name"%>
@@ -10,11 +14,16 @@
     <%= link_to 'ログアウト', top_logout_path, class: "btn uid2"%>
 <% end %>
 
-<%= link_to "投稿する", new_content_path, class:"btn uid3"%>
+<%= link_to "投稿する", new_content_path, class: "btn uid3"%>
 
+<%= link_to "北海道", prefectures_path, class: "btn pre"%>
+
+<<<<<<< HEAD
 <%= link_to "北海道", prefectures_path %><br>
 <%= link_to "青森県", aomoris_path %>
 </div>
+=======
+>>>>>>> 065796b12c3d1c088b32749e9dd946889c87db3e
 <center>
 <% @contents.each do |e| %>
 <p>
@@ -102,7 +111,7 @@
     
     .contents{
         font-size: 20px;
-        background: #FFFFCC;
+        background-color: #FFFF99;
         background-clip: content-box;
         width: 70%;
         border-radius: 100vh;
@@ -118,5 +127,15 @@
     .place{
         color: #880000;
         padding-left: 10px;
+    }
+    
+    .pre{
+        color: #FFFFFF;
+        position: fixed;
+        top: 160px;left: 25px;
+        font-size: 15px;
+        background: #FF9900;
+        border-radius: 100vh;
+        padding: 12px 20px;
     }
 </style>
