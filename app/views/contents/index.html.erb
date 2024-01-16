@@ -10,7 +10,9 @@
     <%= link_to 'ログアウト', top_logout_path, class: "btn uid2"%>
 <% end %>
 
-<%= link_to "投稿する", new_content_path, class: "btn uid3"%>
+<% if current_user %>
+    <%= link_to "投稿する", new_content_path, class: "btn uid3"%>
+<% end %>
 
 <%= link_to "北海道", prefectures_path, class: "btn pre1"%>
 <%= link_to "青森県", aomoris_path, class: "btn pre2" %>
@@ -625,12 +627,22 @@
         padding: 12px 20px;
     }
     
-    .pre47{
+    .pre46{
         color: #FFFFFF;
         position: fixed;
         top: 910px;left: 90px;
         font-size: 15px;
         background: #FF3333;
+        border-radius: 100vh;
+        padding: 12px 20px;
+    }
+    
+    .pre47{
+        color: #FFFFFF;
+        position: fixed;
+        top: 2460px;left: 25px;
+        font-size: 15px;
+        background: #FF9900;
         border-radius: 100vh;
         padding: 12px 20px;
     }

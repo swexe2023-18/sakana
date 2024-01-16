@@ -1,0 +1,2 @@
+module HyougosHelper
+end

@@ -5,7 +5,9 @@
 <%= link_to "ぎょたったー", contents_path, class: "name"%>
 <%= link_to "新規登録", new_user_path, class: "btn btn--uid1"%>
 
-<%= link_to "投稿する", new_content_path, class:"btn uid3"%>
+<% if current_user %>
+    <%= link_to "投稿する", new_content_path, class: "btn uid3"%>
+<% end %>
 
 <center>
 <h2>ユーザーログイン</h2>

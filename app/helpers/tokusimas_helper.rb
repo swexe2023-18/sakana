@@ -1,0 +1,2 @@
+module TokusimasHelper
+end

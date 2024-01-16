@@ -1,0 +1,2 @@
+module MiyazakisHelper
+end

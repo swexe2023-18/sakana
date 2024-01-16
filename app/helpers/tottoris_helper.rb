@@ -1,0 +1,2 @@
+module TottorisHelper
+end
