@@ -20,7 +20,7 @@ Rails.application.routes.draw do
   resources :tibas, only: [:index]
   resources :toukyous, only: [:index]
   resources :kanagawas, only: [:index]
-  resources :yamanasi, only: [:index]
+  resources :yamanasis, only: [:index]
   resources :naganos, only: [:index]
   resources :niigatas, only: [:index]
   resources :toyamas, only: [:index]

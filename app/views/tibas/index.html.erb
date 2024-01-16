@@ -13,25 +13,27 @@
 
 <%= link_to "投稿する", new_content_path, class: "btn uid3"%>
 </html>
-
+<center>
+    <h1 class="prename">千葉県</h1>
 <% @tibas.each do |f| %>
     <p>
+        <div class="contents">
         <nobr class="fname">
        ・ 魚の名前🐟：
         </nobr>
         <%= f.fish_name %>
-        
-        <nobr class="place">
-        ・場所🎣：
-        </nobr>
-        <%= f.place_name %>
         <nobr class="size">
         ・サイズ📏：
         </nobr>
         <%= f.size %>
         cm
+        <nobr class="place">
+        ・場所🎣：
+        </nobr>
+        <%= f.place_name %>
     </p>
 <% end %>
+</center>
 </html>
 
 <style>
@@ -116,6 +118,11 @@
         border-radius: 100vh;
         padding: 12px 20px;
     }
+    .prename{
+        color: #FFFFFF;
+        background: #00CC33;
+        border-radius: 100vh;
+        padding: 12px 20px;
+    }
 </style>
 
-<%= link_to "トップへ", contents_path %>
