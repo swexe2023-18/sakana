@@ -25,15 +25,8 @@ production:
   adapter: postgresql
   encoding: unicode
   pool: 5
-<<<<<<< HEAD
-  database: sakana
-  username: sakana_user
-  password: <%= ENV['MYSITE_DATABASE_PASSWORD'] %>
-  url: <%= ENV['DATABASE_URL'] %>
-=======
   database: a_7yc2
   username: a_7yc2_user
   password: <%= ENV['MYSITE_DATABASE_PASSWORD'] %>
   url: <%= ENV['DATABASE_URL'] %>
   #database: db/production.sqlite3
->>>>>>> 1dfe46c6582580aa4c6fe60909e5fffdf60ba0e7

@@ -9,7 +9,9 @@
     <%= link_to 'ログアウト', top_logout_path, class: "btn uid2"%>
 <% end %>
 
-<%= link_to "投稿する", new_content_path, class:"btn uid3"%>
+<% if current_user %>
+    <%= link_to "投稿する", new_content_path, class: "btn uid3"%>
+<% end %>
 
 <center>
 <h2>ユーザー新規登録</h2>

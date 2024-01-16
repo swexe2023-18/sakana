@@ -1,4 +1,28 @@
 Rails.application.routes.draw do
+  get 'okinawas/index'
+  get 'kagosimas/index'
+  get 'miyazakis/index'
+  get 'ooitas/index'
+  get 'kumamotos/index'
+  get 'nagasakis/index'
+  get 'sagas/index'
+  get 'hukuokas/index'
+  get 'koutis/index'
+  get 'ehimes/index'
+  get 'kagawas/index'
+  get 'tokusimas/index'
+  get 'yamagutis/index'
+  get 'hirosimas/index'
+  get 'okayamas/index'
+  get 'simanes/index'
+  get 'tottoris/index'
+  get 'wakayamas/index'
+  get 'naras/index'
+  get 'hyougos/index'
+  get 'kyougos/index'
+  get 'oosakas/index'
+  get 'kyoutos/index'
+  get 'sigas/index'
   get 'mies/index'
   get 'aitis/index'
   get 'sizuokas/index'
@@ -20,7 +44,7 @@ Rails.application.routes.draw do
   resources :tibas, only: [:index]
   resources :toukyous, only: [:index]
   resources :kanagawas, only: [:index]
-  resources :yamanasi, only: [:index]
+  resources :yamanasis, only: [:index]
   resources :naganos, only: [:index]
   resources :niigatas, only: [:index]
   resources :toyamas, only: [:index]

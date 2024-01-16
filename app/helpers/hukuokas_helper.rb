@@ -1,0 +1,2 @@
+module HukuokasHelper
+end

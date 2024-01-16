@@ -1,0 +1,121 @@
+<htmml>
+
+<%= image_tag "fishing_gyotaku.png", class: "img"%>
+
+<%= link_to "ぎょたったー", contents_path, class: "name"%>
+    
+<%= link_to "新規登録", new_user_path, class: "btn btn--uid1"%>
+<%= link_to "ログイン", top_main_path, class: "btn uid2"%>
+
+<% if current_user %>
+    <%= link_to 'ログアウト', top_logout_path, class: "btn uid2"%>
+<% end %>
+
+<%= link_to "投稿する", new_content_path, class: "btn uid3"%>
+</html>
+
+<% @okayamas.each do |f| %>
+    <p>
+        <nobr class="fname">
+       ・ 魚の名前🐟：
+        </nobr>
+        <%= f.fish_name %>
+        
+        <nobr class="place">
+        ・場所🎣：
+        </nobr>
+        <%= f.place_name %>
+        <nobr class="size">
+        ・サイズ📏：
+        </nobr>
+        <%= f.size %>
+        cm
+    </p>
+<% end %>
+</html>
+
+<style>
+    html{
+        background: linear-gradient(90deg, rgb(11, 110, 255), rgb(0, 255, 255));
+    }
+    .btn--uid1{
+        color: #FFFFFF;
+        position: fixed;
+        top: 20px;right: 200px;
+        font-size: 20px;
+        background: #FF9900;
+        border-radius: 100vh;
+        padding: 12px 20px;
+    }
+    .uid2{
+        color: #FFFFFF;
+        position: fixed;
+        top: 80px;right: 200px;
+        font-size: 20px;
+        background: #FF9900;
+        border-radius: 100vh;
+        padding: 12px 20px;
+    }
+    
+    .uid3{
+        color: #FFFFFF;
+        position: fixed;
+        top: 20px;right: 70px;
+        font-size: 20px;
+        background: #FF9900;
+        border-radius: 100vh;
+        padding: 12px 20px;
+    }
+    
+    .img{
+        position: fixed;
+        width: 150px;
+        height: 150px;
+        object-fit:cover;
+        margin: 0 0 0 20px;
+    }
+    
+    .name{
+        position: absolute;
+        position: fixed;
+        left: 28px;
+        top: 110px;
+        font-size:25px;
+        font-weight: 900;
+        color: #FF9900;
+        padding:0;
+        margin:0;
+    }
+    
+    .contents{
+        font-size: 20px;
+        background: #FFFFCC;
+        background-clip: content-box;
+        width: 70%;
+        border-radius: 100vh;
+    }
+    .fname{
+        color: #FF9900;
+        padding-left: 10px;
+    }
+    .size{
+        color: #00CC33;
+        padding-left: 10px;
+    }
+    .place{
+        color: #880000;
+        padding-left: 10px;
+    }
+    
+    .pre{
+        color: #FFFFFF;
+        position: fixed;
+        top: 160px;left: 25px;
+        font-size: 15px;
+        background: #FF9900;
+        border-radius: 100vh;
+        padding: 12px 20px;
+    }
+</style>
+
+<%= link_to "トップへ", contents_path %>
